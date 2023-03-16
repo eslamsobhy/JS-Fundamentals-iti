@@ -2,11 +2,11 @@
 function validate(num1, num2) {
   if (typeof num1 !== "number" || typeof num2 !== "number") {
     throw "ERROR: Arguments are not valid!";
-  } else if (arguments.length !== 2) {
-    throw "ERROR: Number of arguments is not valid!";
-  } else {
-    console.log(num1, num2);
   }
+  if (arguments.length !== 2) {
+    throw "ERROR: Number of arguments is not valid!";
+  }
+  console.log(num1, num2);
 }
 
 // 2
@@ -24,9 +24,8 @@ function add() {
   for (var i = 0; i < arguments.length; i++) {
     if (typeof arguments[i] !== "number") {
       throw "ERROR: Non-Numeric values are not accepted!";
-    } else {
-      sum += arguments[i];
     }
+    sum += arguments[i];
   }
   return sum;
 }
