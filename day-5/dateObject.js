@@ -1,5 +1,5 @@
 // 1
-/*
+
 var days = {
   0: "sunday",
   1: "monday",
@@ -16,8 +16,7 @@ do {
   !/^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/.test(date)
 );
 var dateObj = new Date(date);
-console.log(days[dateObj.getDay()]);
-*/
+alert(days[dateObj.getDay()]);
 
 // 2
 var inputDate = prompt("Enter the date pls: format(dd-mm-yyyy)");
@@ -75,4 +74,4 @@ function validateDate(str) {
 }
 
 // validateDate(inputDate);
-// console.log(validateDate(inputDate));
+console.log(validateDate(inputDate));

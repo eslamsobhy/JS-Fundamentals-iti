@@ -1,6 +1,5 @@
 // 1
 
-/*
 var tips = [
   "JavaScript is a dynamic computer programming language.",
   "It is lightweight.",
@@ -17,10 +16,9 @@ var tips = [
 
 var random = Math.floor(Math.random() * tips.length);
 document.write("<h1>JS Tip Of The Day: " + tips[random] + "</h1>");
-*/
 
 // 2
-/*
+
 var arr = [];
 for (var i = 0; i < 3; i++) {
   do {
@@ -30,11 +28,12 @@ for (var i = 0; i < 3; i++) {
 }
 var sum = 0;
 var mult = 1;
-var div = 1;
+var div = arr[0];
 
-arr.forEach(function (element) {
+arr.forEach(function (element, index) {
   sum += parseInt(element);
   mult *= element;
+  if (index === 0) return;
   div /= element;
 });
 
@@ -56,15 +55,14 @@ document.write(
     " = " +
     div
 );
-*/
 
 // 3
 function values() {
-  var reversed = [];
-  for (var i = arguments.length - 1; i >= 0; i--) {
-    reversed.push(arguments[i]);
-  }
-  return reversed;
+  var reversed = [...arguments];
+  // for (var i = arguments.length - 1; i >= 0; i--) {
+  //   reversed.push(arguments[i]);
+  // }
+  return reversed.reverse();
 }
 
 console.log(values(1, 2, 3));
