@@ -1,6 +1,6 @@
 // 1
 function currentDate() {
-  var date = new Date();
+  var date = new Date().toLocaleDateString();
   document.getElementById("date").innerHTML = date;
 }
 

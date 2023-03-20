@@ -13,7 +13,7 @@ function getData() {
     } while (isFinite(name) || name.length <= 3 || name.length >= 10);
     // getting the age
     do {
-      var age = prompt("Enter the age pls: ");
+      var age = parseInt(prompt("Enter the age pls: "));
     } while (!/^[0-9]*$/.test(age) || age <= 10 || age >= 60);
     // pushing values
     names.push(name);

@@ -12,9 +12,12 @@ var colors = [
 ];
 
 function handleClick() {
-  var randomColor = Math.floor(Math.random() * colors.length);
-  var bgcolor = colors[randomColor];
+  var r = Math.floor(Math.random() * 255);
+  var g = Math.floor(Math.random() * 255);
+  var b = Math.floor(Math.random() * 255);
+  var randomColor = "rgb(" + r + "," + g + "," + b + ")";
+  // var bgcolor = colors[randomColor];
   var newNode = document.querySelector(".square").cloneNode();
-  newNode.style.backgroundColor = bgcolor;
+  newNode.style.backgroundColor = randomColor;
   document.querySelector(".container").append(newNode);
 }

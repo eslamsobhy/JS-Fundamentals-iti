@@ -21,12 +21,22 @@ function ChangeLSpace(space) {
 }
 
 // text indent
-function ChangeTransform() {}
+function ChangeIndent(indent) {
+  par.style.textIndent = indent;
+}
 // text transform
-function ChangeTransform() {}
+function ChangeTransform(transform) {
+  par.style.textTransform = transform;
+}
 // text decoration
-function ChangeDecorate() {}
+function ChangeDecorate(decoration) {
+  par.style.textDecoration = decoration;
+}
 // text border
-function ChangeBorder() {}
+function ChangeBorder(border) {
+  par.style.border = "1px " + border;
+}
 // border color
-function ChangeBorderColor() {}
+function ChangeBorderColor(bcolor) {
+  par.style.borderColor = bcolor;
+}
