@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      body {
+        margin: 30px;
+        text-align: center;
+        background-color: rgb(255, 187, 61);
+      }
+
+      form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        gap: 30px;
+      }
+
+      span {
+        color: rgb(255, 0, 0);
+        font-weight: bold;
+      }
+
+      .btns {
+        margin-top: 20px;
+      }
+
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="input-con">
+        <label for="name">Name: </label>
+        <input type="text" name="name" />
+        <span id="name"></span>
+      </div>
+      <div class="input-con">
+        <label for="email">Email: </label>
+        <input type="text" name="email" />
+        <span id="email"></span>
+      </div>
+      <div class="input-con">
+        <label for="age">Age: </label>
+        <input type="text" name="age" />
+        <span id="age"></span>
+      </div>
+    </form>
+    <div class="btns">
+      <button onclick="add()">Add</button>
+      <button onclick="reset()">Reset</button>
+    </div>
+
+    <table
+      style="width: 400px; border: 1px solid; margin: 20px auto; display: none"
+    >
+      <thead>
+        <th style="border: 1px solid">Name</th>
+        <th style="border: 1px solid">Email</th>
+        <th style="border: 1px solid">Age</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="./formValidation.js"></script>
+  </body>
+</html>
