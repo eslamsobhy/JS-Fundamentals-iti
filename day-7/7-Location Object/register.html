@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registeration Page</title>
+    <style>
+      form {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: space-around;
+        width: 500px;
+        height: 250px;
+        background-color: #eee;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px 20px 60px 20px;
+        border-radius: 10px;
+      }
+
+      .labels {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+      }
+
+      input {
+        border: none;
+        width: 300px;
+        height: 20px;
+        border-radius: 5px;
+      }
+
+      button {
+        color: white;
+        position: absolute;
+        bottom: 20px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.75);
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="welcome.html">
+      <section class="labels">
+        <p>Name:</p>
+        <p>Email:</p>
+        <p>Mobile:</p>
+        <p>Gender:</p>
+        <p>Address:</p>
+      </section>
+      <section class="inputs">
+        <input type="text" name="name" required />
+        <input type="email" name="email" required />
+        <input type="number" name="mobile" required />
+        <input type="text" name="gender" required />
+        <input type="text" name="address" required />
+      </section>
+      <button onclick="handleSubmit(this, event)">Submit</button>
+    </form>
+
+    <script>
+      function handleSubmit(btn, e) {
+        // e.preventDefault();
+        // console.log(window.location);
+      }
+    </script>
+  </body>
+</html>
