@@ -4,16 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Welcome Page</title>
-    <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      span {
-        font-weight: bold;
-      }
-    </style>
   </head>
   <body>
     <h1 id="greeting">Welcome</h1>
@@ -28,19 +20,6 @@
     Gender:
     <span class="gen"></span><br />
 
-    <script>
-      var data = window.location.search.slice(1);
-      var dataArr = data.split("&");
-      var name = dataArr[0].split("=")[1];
-      var email = dataArr[1].split("=")[1];
-      var mobile = dataArr[2].split("=")[1];
-      var gender = dataArr[3].split("=")[1];
-      var address = dataArr[4].split("=")[1];
-      document.getElementById("greeting").innerText += " " + name;
-      document.getElementsByClassName("email")[0].innerText = " " + email;
-      document.getElementsByClassName("addr")[0].innerText = " " + address;
-      document.getElementsByClassName("mob")[0].innerText = " " + mobile;
-      document.getElementsByClassName("gen")[0].innerText = " " + gender;
-    </script>
+    <script src="./welcome.js"></script>
   </body>
 </html>
