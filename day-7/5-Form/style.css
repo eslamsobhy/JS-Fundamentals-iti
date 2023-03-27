@@ -1,0 +1,27 @@
+body {
+  margin: 30px;
+  text-align: center;
+  background-color: rgb(255, 187, 61);
+}
+
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+span {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+
+.btns {
+  margin-top: 20px;
+}
+
+td {
+  border: 1px solid black;
+}
