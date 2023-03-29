@@ -1,42 +1,25 @@
+var currentMarble = 0;
 var images = document.getElementsByTagName("img");
 
-var timer;
-var isImgHovered = false;
-var imgContainer = document.querySelector(".img-container");
-
-// when hovering the image container
-imgContainer.addEventListener("mouseenter", function () {
-  isImgHovered = true;
-  clearTimeout(timer);
-});
-
-// when the mouse leaves the image container
-imgContainer.addEventListener("mouseleave", function () {
-  isImgHovered = false;
-  for (var i = 0; i < images.length; i++) {
-    images[i].setAttribute("src", "./images/marble1.jpg");
-  }
-  animation();
-});
-
 function animation() {
-  timer = setTimeout(function () {
-    images[0].setAttribute("src", "./images/marble2.jpg");
-  }, 500);
-  timer = setTimeout(function () {
-    images[0].setAttribute("src", "./images/marble1.jpg");
-    images[1].setAttribute("src", "./images/marble2.jpg");
-  }, 1000);
-  timer = setTimeout(function () {
-    images[1].setAttribute("src", "./images/marble1.jpg");
-    images[2].setAttribute("src", "./images/marble2.jpg");
-  }, 1500);
-  timer = setTimeout(function () {
-    images[2].setAttribute("src", "./images/marble1.jpg");
-    images[3].setAttribute("src", "./images/marble2.jpg");
-  }, 2000);
-  timer = setTimeout(function () {
-    images[3].setAttribute("src", "./images/marble1.jpg");
-    images[4].setAttribute("src", "./images/marble2.jpg");
-  }, 2500);
+  images[currentMarble].setAttribute("src", "./images/marble1.jpg");
+  if (currentMarble < 4) {
+    images[currentMarble + 1].setAttribute("src", "./images/marble2.jpg");
+  }
+  currentMarble++;
+  if (currentMarble > 4) {
+    currentMarble = 0;
+    images[currentMarble].setAttribute("src", "./images/marble2.jpg");
+  }
 }
+
+var animationInterval = setInterval(animation, 500);
+
+var imgContainer = document.getElementsByClassName("img-container")[0];
+imgContainer.addEventListener("mouseover", function () {
+  clearInterval(animationInterval);
+});
+
+imgContainer.addEventListener("mouseout", function () {
+  setInterval(animation, 500);
+});
