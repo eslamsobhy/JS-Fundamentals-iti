@@ -21,5 +21,5 @@ imgContainer.addEventListener("mouseover", function () {
 });
 
 imgContainer.addEventListener("mouseout", function () {
-  setInterval(animation, 500);
+  animationInterval = setInterval(animation, 500);
 });
